@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     tools:context="com.example.per6.learningbackendlessftkotlin.LoginActivity">
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/userNameLogin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -16,9 +17,9 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="User Name"
-        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginTextView" />
 
@@ -32,15 +33,15 @@
         android:layout_marginTop="8dp"
         android:text="Login"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintBottom_toTopOf="@+id/userNameLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -50,11 +51,11 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/loginSwitcher"
+        app:layout_constraintBottom_toTopOf="@+id/loginFlipper"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintTop_toBottomOf="@+id/userNameLogin" />
 
     <Button
         android:id="@+id/createAccount"
@@ -68,10 +69,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginSwitcher" />
+        app:layout_constraintTop_toBottomOf="@+id/loginFlipper" />
 
-    <ViewSwitcher
-        android:id="@+id/loginSwitcher"
+    <ViewFlipper
+        android:id="@+id/loginFlipper"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -82,7 +83,7 @@
         app:layout_constraintBottom_toTopOf="@+id/createAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password">
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin">
 
         <Button
             android:layout_gravity="center_horizontal"
@@ -97,6 +98,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-    </ViewSwitcher>
+    </ViewFlipper>
 
 </android.support.constraint.ConstraintLayout>
