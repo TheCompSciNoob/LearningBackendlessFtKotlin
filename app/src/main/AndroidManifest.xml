@@ -23,7 +23,8 @@
             android:name=".RegistrationActivity"
             android:parentActivityName=".LoginActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".RestaurantDisplayActivity"></activity>
+        <activity android:name=".RestaurantDisplayActivity" />
+        <activity android:name=".NewRestaurantActivity"></activity>
     </application>
 
 </manifest>
